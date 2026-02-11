@@ -28,7 +28,7 @@ export default function StanceReadyPage() {
         throw.
       </p>
 
-      <h4>Body Position</h4>
+      <h3>Body Position</h3>
       <p>
         From the <Link href="/guide/stance-relaxed">relaxed stance</Link>, raise
         your butt slightly so your thighs are about parallel to the ground. Your
@@ -36,7 +36,7 @@ export default function StanceReadyPage() {
         and ready to move.
       </p>
 
-      <h4>Feet Position</h4>
+      <h3>Feet Position</h3>
       <p>
         Your feet should be slightly wider than shoulder-width, with your throwing
         side foot slightly back. Your weight is on the balls of your feet, ready
@@ -44,14 +44,14 @@ export default function StanceReadyPage() {
         up to throw immediately.
       </p>
 
-      <h4>Arms and Glove</h4>
+      <h3>Arms and Glove</h3>
       <p>
         Present a low target with your glove extended toward the pitcher. Keep
         your arm relaxed but ready. Your elbow should be slightly bent, not locked
         out.
       </p>
 
-      <h4>Throwing Hand</h4>
+      <h3>Throwing Hand</h3>
       <p>
         This is the key difference from the relaxed stance. Your throwing hand
         should be in a fist, positioned behind your mitt. When you receive the
@@ -59,7 +59,7 @@ export default function StanceReadyPage() {
         throw.
       </p>
 
-      <h4>Mental Preparation</h4>
+      <h3>Mental Preparation</h3>
       <p>
         In the ready stance, your mind should also be ready. Know where the
         runners are. Know the count. Anticipate where the pitch might go if it&apos;s

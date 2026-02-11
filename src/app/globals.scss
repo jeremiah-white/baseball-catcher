@@ -126,6 +126,34 @@ a {
 .main-content {
   flex: 1;
   min-width: 0;
+
+  p {
+    margin-bottom: $spacing-md;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    font-weight: bold;
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-md;
+    color: $baseball-navy;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-sm;
+    color: $baseball-navy;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-sm;
+    color: $baseball-navy;
+  }
 }
 
 .left-sidebar {

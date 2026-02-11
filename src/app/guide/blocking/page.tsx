@@ -30,7 +30,7 @@ export default function BlockingPage() {
         controlling pitches in the dirt.
       </p>
 
-      <h4>Technique</h4>
+      <h3>Technique</h3>
       <p>
         The catcher should already be in the{" "}
         <Link href="/guide/stance-ready">ready stance</Link> when attempting to
@@ -74,7 +74,7 @@ export default function BlockingPage() {
         </em>
       </p>
 
-      <h4>Pitches to the Side</h4>
+      <h3>Pitches to the Side</h3>
       <p>
         For pitches that do not come directly at you, there is a slight adjustment
         that needs to be made with your positioning. Obviously, you cannot just
@@ -126,7 +126,7 @@ export default function BlockingPage() {
         and knock it down using whatever means available (i.e. glove, bare hand).
       </p>
 
-      <h4>Breaking Balls</h4>
+      <h3>Breaking Balls</h3>
       <p>
         Blocking breaking balls requires you to be aware of the spin of the pitch
         and how the ball is going to react once it hits the ground. A pitcher

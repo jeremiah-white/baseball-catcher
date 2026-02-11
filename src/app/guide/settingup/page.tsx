@@ -20,7 +20,7 @@ export default function SettingUpPage() {
         or on the line of this box at the time of a pitch.
       </p>
 
-      <h4>Relation to Hitter</h4>
+      <h3>Relation to Hitter</h3>
       <p>
         Where does the catcher set up in relation to the hitter? On many
         occasions, I have seen catchers set up too far behind the hitter. This
@@ -40,7 +40,7 @@ export default function SettingUpPage() {
         stay back a little.
       </p>
 
-      <h4>When To Set Up</h4>
+      <h3>When To Set Up</h3>
       <p>
         Do not set up too early after giving your sign. This gives away pitch
         location. Opposing coaches will relay this information to the hitter or

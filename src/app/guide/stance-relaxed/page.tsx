@@ -28,14 +28,14 @@ export default function StanceRelaxedPage() {
         focus is receiving the pitch.
       </p>
 
-      <h4>Body Position</h4>
+      <h3>Body Position</h3>
       <p>
         Squat with your feet shoulder-width apart or slightly wider. Your weight
         should be evenly distributed. Keep your hips and shoulders square to the
         pitcher. You can let your rear end drop close to your heels for comfort.
       </p>
 
-      <h4>Feet Position</h4>
+      <h3>Feet Position</h3>
       <p>
         Your feet can be straight across or slightly staggered, with your throwing
         side foot slightly back. Point your toes forward or slightly outward. Find
@@ -43,21 +43,21 @@ export default function StanceRelaxedPage() {
         period.
       </p>
 
-      <h4>Arms and Glove</h4>
+      <h3>Arms and Glove</h3>
       <p>
         Extend your glove hand toward the pitcher with your palm facing them. Keep
         your arm relaxed—not stiff. Your glove should present a good target, low
         in the strike zone.
       </p>
 
-      <h4>Throwing Hand</h4>
+      <h3>Throwing Hand</h3>
       <p>
         In the relaxed stance, you can place your throwing hand behind your back
         or behind your right ankle/calf. This protects it from foul tips when
         there&apos;s no need to make a quick throw.
       </p>
 
-      <h4>Transitioning to Ready Stance</h4>
+      <h3>Transitioning to Ready Stance</h3>
       <p>
         When the situation changes—runner reaches base or two strikes on the
         batter—you need to quickly transition to the{" "}

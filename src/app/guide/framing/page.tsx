@@ -28,17 +28,17 @@ export default function FramingPage() {
         For a pitch that is down in the zone and you are attempting to frame, catch it in the normal overhand position and then absorb or funnel it toward your stomach in a motion that is backward and up. Use your entire arm for this and not just your wrist. DO NOT flick your wrist up or catch it underhand if you are attempting to frame the low pitch. The reasoning from an umpire&apos;s perspective is that a ball that is caught underhand crossed the plate too low in the zone for it to be called a strike. It looks like a ball if you catch it underhand. In a perfect world, the way you catch a pitch should not matter, only where the pitch crosses through the strike zone. Catch the low pitch overhand.
       </p>
 
-      <h4>Get Around the Ball</h4>
+      <h3>Get Around the Ball</h3>
       <p>
         When I describe proper framing techniques to my catchers, I use the phrase &quot;get around the ball.&quot; Simply put, getting around the ball means catching the outside of the baseball and closing the four fingered part of the glove in the direction of the strike zone. The outside of the baseball is the side of the ball that is furthest away from the middle of the strike zone. Using this technique in conjunction with framing produces more strikes being called on borderline pitches.
       </p>
 
-      <h4>Obvious Balls</h4>
+      <h3>Obvious Balls</h3>
       <p>
         There is <u>no reason</u> to frame a pitch that is an obvious ball. Catch the ball and throw it back to the pitcher.
       </p>
 
-      <h4>Don&apos;t Show Up the Umpire!!!!</h4>
+      <h3>Don&apos;t Show Up the Umpire!!!!</h3>
       <p>
         Never frame a pitch for more than a moment or two. Umpires are human and they make mistakes from time to time. They may miss a pitch now and then that should be called a strike. Remember, that if you are framing a pitch, the pitch is a borderline strike anyway. Showing up the umpire on a call that didn&apos;t go your way by holding your mitt where you caught the ball only causes more problems than it solves. The fans will start to get on the umpire for missing a call, which might bother the umpire. As a result, you are less likely to get borderline calls later in the game. Although an umpire should be impartial and consistent with his calls, he is human. Strike calls that he used to give you might now be called as balls.
       </p>

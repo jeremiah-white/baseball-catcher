@@ -20,9 +20,9 @@ export default function StancePage() {
         for more information on each stance!
       </p>
 
-      <h3 style={{ textAlign: "center", marginTop: "2rem" }}>Relaxed Stance</h3>
-      <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem" }}>
-        <Link href="/guide/stance-relaxed">
+      <h3>Relaxed Stance</h3>
+      <div style={{ marginBottom: "2rem", overflow: "hidden" }}>
+        <Link href="/guide/stance-relaxed" style={{ float: "left", marginRight: "1rem", marginBottom: "0.5rem" }}>
           <Image
             src="/images/relaxedStance.jpg"
             width={200}
@@ -30,24 +30,22 @@ export default function StancePage() {
             alt="Relaxed Stance"
           />
         </Link>
-        <div>
-          <p>
-            A general stance most catchers use with the bases empty and less than
-            two strikes is called a relaxed stance. The relaxed stance begins by
-            squatting with your feet shoulder-width apart. Keep your hips and
-            shoulders square to the pitcher and your feet straight across or
-            slightly staggered. Stay low and in a comfortable position. Relax your
-            receiving arm (mitt hand) and point your palm at the pitcher. Place
-            your throwing hand behind your back or behind your shoe. Present the
-            pitcher with a good low target. Read more about a{" "}
-            <Link href="/guide/stance-relaxed">relaxed stance</Link>.
-          </p>
-        </div>
+        <p>
+          A general stance most catchers use with the bases empty and less than
+          two strikes is called a relaxed stance. The relaxed stance begins by
+          squatting with your feet shoulder-width apart. Keep your hips and
+          shoulders square to the pitcher and your feet straight across or
+          slightly staggered. Stay low and in a comfortable position. Relax your
+          receiving arm (mitt hand) and point your palm at the pitcher. Place
+          your throwing hand behind your back or behind your shoe. Present the
+          pitcher with a good low target. Read more about a{" "}
+          <Link href="/guide/stance-relaxed">relaxed stance</Link>.
+        </p>
       </div>
 
-      <h3 style={{ textAlign: "center" }}>Ready Stance</h3>
-      <div style={{ display: "flex", gap: "1rem", flexDirection: "row-reverse", marginBottom: "2rem" }}>
-        <Link href="/guide/stance-ready">
+      <h3>Ready Stance</h3>
+      <div style={{ marginBottom: "2rem", overflow: "hidden" }}>
+        <Link href="/guide/stance-ready" style={{ float: "right", marginLeft: "1rem", marginBottom: "0.5rem" }}>
           <Image
             src="/images/readyStance.jpg"
             width={200}
@@ -55,19 +53,17 @@ export default function StancePage() {
             alt="Ready Stance"
           />
         </Link>
-        <div>
-          <p>
-            Use the ready stance with runners on base and/or two strikes on the
-            batter. In both cases you need to be ready to block a wild pitch or
-            quickly throw out a base runner. The ready stance is simply a raised
-            squat where the weight is now on the balls of your feet instead of the
-            instep and your butt is <em>slightly</em> raised. Keep your hips and
-            shoulders square to the pitcher, relax your receiving arm, and point
-            your palm at the pitcher. Place your throwing hand in a fist behind
-            your mitt. Present the pitcher with a good low target. Read more about
-            a <Link href="/guide/stance-ready">ready stance</Link>.
-          </p>
-        </div>
+        <p>
+          Use the ready stance with runners on base and/or two strikes on the
+          batter. In both cases you need to be ready to block a wild pitch or
+          quickly throw out a base runner. The ready stance is simply a raised
+          squat where the weight is now on the balls of your feet instead of the
+          instep and your butt is <em>slightly</em> raised. Keep your hips and
+          shoulders square to the pitcher, relax your receiving arm, and point
+          your palm at the pitcher. Place your throwing hand in a fist behind
+          your mitt. Present the pitcher with a good low target. Read more about
+          a <Link href="/guide/stance-ready">ready stance</Link>.
+        </p>
       </div>
     </>
   );

@@ -30,7 +30,7 @@ async function verifyTurnstileToken(token: string): Promise<boolean> {
         secret: secretKey,
         response: token,
       }),
-    }
+    },
   );
 
   const data: TurnstileVerifyResponse = await response.json();
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: "All fields are required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
     if (!turnstileToken) {
       return NextResponse.json(
         { error: "Verification required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
     if (!isValidToken) {
       return NextResponse.json(
         { error: "Verification failed. Please try again." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -71,7 +71,7 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: "Invalid email address" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
       console.error("CONTACT_EMAIL environment variable is not set");
       return NextResponse.json(
         { error: "Server configuration error" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -91,14 +91,15 @@ export async function POST(request: NextRequest) {
       console.error("RESEND_API_KEY environment variable is not set");
       return NextResponse.json(
         { error: "Server configuration error" },
-        { status: 500 }
+        { status: 500 },
       );
     }
     const resend = new Resend(apiKey);
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: "Baseball-Catcher.com <noreply@baseball-catcher.com>",
+      // from: "Baseball-Catcher.com <noreply@baseball-catcher.com>",
+      from: "onboarding@resend.dev",
       to: [toEmail],
       replyTo: email,
       subject: `[Baseball-Catcher.com] ${subject}`,
@@ -124,7 +125,7 @@ ${message}
       console.error("Resend error:", error);
       return NextResponse.json(
         { error: "Failed to send email" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -133,7 +134,7 @@ ${message}
     console.error("Contact form error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

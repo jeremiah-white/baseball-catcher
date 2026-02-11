@@ -28,7 +28,7 @@ export default function ReceivingPage() {
         should not move unless you want to move it.
       </p>
 
-      <h4>Stick the Strike</h4>
+      <h3>Stick the Strike</h3>
       <p>
         If a pitcher throws a pitch that you KNOW is going to be a strike, stick
         the pitch. A phrase I was taught and use repeatedly with my catchers is,
@@ -45,7 +45,7 @@ export default function ReceivingPage() {
         Stick It!
       </p>
 
-      <h4>Beat the Pitch to the Spot</h4>
+      <h3>Beat the Pitch to the Spot</h3>
       <p>
         Another phrase I use with my catchers that helps them with their receiving
         is &quot;beat the pitch.&quot; As you are tracking the pitch with your eyes, you
@@ -57,7 +57,7 @@ export default function ReceivingPage() {
         pitch with your mitt.
       </p>
 
-      <h4>High and Low Pitches</h4>
+      <h3>High and Low Pitches</h3>
       <p>
         A general rule for catching pitches that are high in the zone and
         borderline strikes/balls is to catch them as far back into your body as

@@ -18,14 +18,14 @@ export default function ThrowingThirdbasePage() {
         right-handed batter.
       </p>
 
-      <h4>The Challenge</h4>
+      <h3>The Challenge</h3>
       <p>
         With a right-handed batter at the plate, your throwing lane to third base
         is partially blocked. You need to throw around or over the batter while
         maintaining accuracy and velocity.
       </p>
 
-      <h4>Footwork Options</h4>
+      <h3>Footwork Options</h3>
       <p>
         There are several footwork patterns for throwing to third:
       </p>
@@ -43,14 +43,14 @@ export default function ThrowingThirdbasePage() {
         </li>
       </ul>
 
-      <h4>With a Left-Handed Batter</h4>
+      <h3>With a Left-Handed Batter</h3>
       <p>
         The throw to third is easier with a left-handed batter because your
         throwing lane is clear. Use the same fundamentals as a throw to second—
         quick transfer, replace feet, and throw accurately.
       </p>
 
-      <h4>Reading the Situation</h4>
+      <h3>Reading the Situation</h3>
       <p>
         Runners don&apos;t attempt to steal third as often as second, and when they
         do, they usually get a big jump. If the runner has a great jump, sometimes
@@ -58,7 +58,7 @@ export default function ThrowingThirdbasePage() {
         could lead to a run scoring.
       </p>
 
-      <h4>Target</h4>
+      <h3>Target</h3>
       <p>
         Aim for the infield side of the bag, chest high to the third baseman. This
         allows them to catch and sweep down for the tag in one motion.

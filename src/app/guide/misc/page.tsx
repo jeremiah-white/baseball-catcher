@@ -21,12 +21,12 @@ export default function MiscPage() {
         <a href="#PassBalls">Pass Balls/Wild Pitches</a> | <a href="#popUpsFouls">Pop Ups and Fouls</a> | <a href="#doubleSteals">Double Steals</a> | <a href="#droppedThirdStrike">Dropped Third Strike</a> | <a href="#intentionalWalks">Intentional Walks</a> | <a href="#stealingHome">Stealing Home</a>
       </p>
 
-      <h4>Signaling Plays</h4>
+      <h3>Signaling Plays</h3>
       <p>
         The catcher is responsible in most cases for calling plays in bunt situations as well as first and third situations. Before the pitcher steps on the rubber, get the play from your coach. Step out in front of home plate so your teammates can see and give the correct signals. The signals can be verbal, a series of signs (hand or body), or both. The purpose is to disguise the defensive play and put pressure on the offense to execute.
       </p>
 
-      <h4 id="buntsCoverage">Bunts/Coverage</h4>
+      <h3 id="buntsCoverage">Bunts/Coverage</h3>
       <p>
         In bunt situations, the catcher is the eyes of the defense and the decision maker because the play is happening in front of him. The catcher&apos;s job is to signal the play to the infielders and communicate while the play is unfolding. The fielders need to know if the third baseman is crashing or holding? Is the first baseman crashing or holding? What side does the pitcher cover? These plays should be worked out in practice. Everyone on the field should know what play is on and their responsibilities. The catcher must be decisive and communicate loud enough for his teammates to hear.
       </p>
@@ -43,7 +43,7 @@ export default function MiscPage() {
         A situation may arise where the opposing team is trying to bunt a runner on first to second base. Cover third if your third baseman fields the ball. Depending on your coach&apos;s philosophy, the pitcher may cover instead. I don&apos;t like a pitcher covering any base, as there is a potential for injury on a close play. So, unless your coach tells you not to cover third, get there as soon as the third baseman communicates he is making the play on the bunt. <a href="#topMisc">Back</a>
       </p>
 
-      <h4 id="squeezePlays">Squeeze Plays</h4>
+      <h3 id="squeezePlays">Squeeze Plays</h3>
       <p>
         A squeeze play is a unique play during a game where the runner from third scores on a bunt by the batter. There are two main kinds of squeeze plays, the suicide and safety squeeze. The suicide squeeze gets its name because the runner breaks from third at the start of the pitcher&apos;s windup or on first movement in the stretch. If the batter fails to make contact with the pitch, the runner is dead at home, hence the suicide squeeze. A safety squeeze relies on the runner&apos;s ability to anticipate and read a successful bunt and then attempt to score.
       </p>
@@ -60,7 +60,7 @@ export default function MiscPage() {
         If the hitter misses the pitch, catch the ball and run at the base runner. Make the tag or start a run down. Remember, to chase him back toward third. If the attempt is successful, get the out at first. <a href="#topMisc">Back</a>
       </p>
 
-      <h4 id="runDowns">Run Downs</h4>
+      <h3 id="runDowns">Run Downs</h3>
       <p>
         A correctly executed rundown should take no more than two throws once the rundown begins. A catcher is at a disadvantage during a rundown because of his shin guards. Here are guidelines for rundowns.
       </p>
@@ -85,7 +85,7 @@ export default function MiscPage() {
         If another runner occupies the base where the base runner came from (for example: a runner occupies 3rd base and you have a runner caught between home and 3rd), run him back to the base and tag both runners. The runner that was in the run down is out. The other runner is safe, but you might get him to step off the base. <a href="#topMisc">Back</a>
       </p>
 
-      <h4 id="pickOffs">Pick Offs - pitcher</h4>
+      <h3 id="pickOffs">Pick Offs - pitcher</h3>
       <p>
         Pickoff plays vary from team to team and coach to coach. Some plays involve only the fielders and pitcher. Other plays depend on the catcher for the attempt to be successful. The most common pickoff plays are to second base. One of the more popular plays is the blind pickoff. This pickoff gets it&apos;s name from the fact that the pitcher is not watching the play and relies on the catcher to signal when to turn and throw.
       </p>
@@ -94,7 +94,7 @@ export default function MiscPage() {
         On the blind pickoff play, the fielder (usually the shortstop) will signal the play to the catcher. Maybe they notice the runner is not paying attention or is getting too big a lead. The catcher must then notify the fielder or confirm the play using a subtle signal. Now, signal the pitcher that the play is on. The pitcher must go through his usual routine so the play is not tipped off to the other team. The pitcher should then be looking at the plate and not paying any attention to the runner. This is a timing play and the catcher must read the middle infielder breaking for second. At the correct moment, signal the pitcher to turn and fire to second. The signal can be anything you want. We usually use a glove signal (dropping from the receiving position). The blind pickoff relies on the catcher&apos;s timing of the fielder reaching second base for a successful attempt. <a href="#topMisc">Back</a>
       </p>
 
-      <h4 id="PassBalls">Pass Balls/Wild Pitches</h4>
+      <h3 id="PassBalls">Pass Balls/Wild Pitches</h3>
       <p>
         Even the best catchers have mental and physical breakdowns from time to time. You will have a pitch in the dirt that you won&apos;t be able to block. It may take a bad hop or you just misplay it. If the ball gets away from you with runners on base or on a dropped third strike, you need to find it and get to it as quickly as possible. Do not turn around and run straight back; you will run into the umpire. Peel off to the left or right depending on the side the ball kicks to.
       </p>
@@ -103,7 +103,7 @@ export default function MiscPage() {
         As you approach the ball, slide into position with your throwing leg out in front so you can quickly stand and plant this foot. Reach for the ball with your bare hand or the glove and hand scoop if space permits. For a play at the plate, you will have to turn and fire the ball to the pitcher who is covering home. You should have an idea of where home plate is even with your back to the field. Field the ball, wheel, and throw in one motion. For a play at first base, slide into position, get to your feet, then shuffle and throw to first. If you&apos;re playing on a field with a large area between the backstop and the plate and the ball gets to the backstop, you will not have a play at first. On fields with shorter distance backstops and on plays where the pitch bounces away from you, but does not reach the backstop, you should be able to slide, stand, and throw to first for the out. Remember to get on the wild pitch as quickly as possible. <a href="#topMisc">Back</a>
       </p>
 
-      <h4 id="popUpsFouls">Pop Ups/Fouls</h4>
+      <h3 id="popUpsFouls">Pop Ups/Fouls</h3>
       <p>
         <b><u>Situation:</u></b> a batter hits a popup around the home plate area.
       </p>
@@ -112,7 +112,7 @@ export default function MiscPage() {
         <b><u>Solution:</u></b> immediately stand up, remove your mask, and locate the ball. Make sure to keep the mask in you throwing hand so you do not trip over it. Turn your back to the infield, as this makes it easier to field the popup. The physics of a popup dictate that the ball will always come back toward the field of play. Do not stand directly under the popup or it will land behind you. Stand so it looks like the ball will land a few yards in front of you. Read and react to the ball. It is easier to move forward on a ball than to backpedal. Once you are set, discard your mask by throwing it hard and to the right. Make sure it is far enough away as to not interfere with the play. Using both hands, catch the ball above your head. If there are runners on base, quickly turn and find them. <a href="#topMisc">Back</a>
       </p>
 
-      <h4 id="doubleSteals">Double Steals</h4>
+      <h3 id="doubleSteals">Double Steals</h3>
       <p>
         There are two common situations where an opposing team might try to double steal. The first situation is with runners on first and second. The catcher has the option of throwing to either base. Know your base runners and the situation. Ideally, you want to get the lead runner at third. However, there are some advantages to throwing through to second for the trailing runner. First, he might not run as hard if he thinks the play is on the lead runner. Second, trailing runners will not have as good a jump. Third, you do not have to worry about throwing around a right-handed hitter.
       </p>
@@ -132,7 +132,7 @@ export default function MiscPage() {
         <li>Throw to a cut man (pitcher, 2nd baseman, Shortstop). Some teams will incorporate a cut play that involves a throw through to second base. It is up to the cut man (usually shortstop or 2nd baseman) to decide to cut the ball and make a play on the runner at third or let the ball go through to second base. <a href="#topMisc">Back</a></li>
       </ul>
 
-      <h4 id="droppedThirdStrike">Dropped Third Strike</h4>
+      <h3 id="droppedThirdStrike">Dropped Third Strike</h3>
       <p>
         A dropped third strike is really two different events. The first event is exactly as the title says; the catcher drops a third strike that was either a called strike or the batter swung and missed. The other event that can be considered a dropped third strike is on a ball that bounces in the dirt and the hitter swings and misses. The catcher must block this pitch so the hitter does not advance to first.
       </p>
@@ -141,17 +141,17 @@ export default function MiscPage() {
         If either event takes place and first base is UNOCCUPIED, the hitter may advance to first. If first base is occupied with less than two outs, the hitter is out. However, be ready to make a play on the other base runners. The exception is with two outs. The hitter and all base runners may advance. As a catcher, you must either tag the runner before he runs or throw to first for the force out. Always try and tag the runner before you attempt to throw to first. Make sure you clear the runner to the left or right before you throw. Do not try and throw over the runner. In the rare situation with the bases loaded, two outs, and a dropped third strike, you may also tag home because there is a force out at every base. See the section on <Link href="/guide/throwing">throwing</Link> for more info. <a href="#topMisc">Back</a>
       </p>
 
-      <h4 id="intentionalWalks">Intentional Walks</h4>
+      <h3 id="intentionalWalks">Intentional Walks</h3>
       <p>
         Throughout the course of a game, your coach may decide to intentionally walk a hitter. This is done for a number of reasons. Instead of squatting in your ready stance, stand up in the catcher&apos;s box. Depending on whether the hitter is in the left or right batters box, put out your opposite arm out to the side of your body. Be ready to move to the box you were pointing to. You do not have to give a sign other than extending your arm. The pitcher should know what is expected of him. As soon as the pitcher releases the ball, slide out to the side. The pitcher should deliver the pitch chest high and in the middle to outside of the opposite batters box (the box where you&apos;re at). The pitch should be far enough outside that the batter does not have a chance of hitting it. Catch the ball using both hands and return it to the pitcher. Repeat this process three more times. <a href="#topMisc">Back</a>
       </p>
 
-      <h4 id="pace">Game Pace</h4>
+      <h3 id="pace">Game Pace</h3>
       <p>
         It is the job of the catcher to influence the pace of the game. Ideally, you want your pitcher to work quickly and throw as few pitches as possible. Some pitchers prefer to work slowly; you should know this ahead of time. If your pitcher is throwing well and hitting his spots, keep the game moving. Call your pitches as soon as the hitter steps in the box. If your pitcher is struggling, slow the pace down. Let him catch his breath and maybe call time and go have a talk with him. Help him build his confidence and get back into a rhythm. <a href="#topMisc">Back</a>
       </p>
 
-      <h4 id="stealingHome">Stealing Home</h4>
+      <h3 id="stealingHome">Stealing Home</h3>
       <p>
         This is a rare situation that you might never see in a game. When it does happen, the pitcher will be in the wind up and the runner will break on first movement by the pitcher. As the catcher, you will probably not see the runner break especially with a right-handed hitter at the plate. Listen to your teammates, they should be yelling. Receive the ball and quickly move to the left side of the plate, leading with your glove. Find the runner and apply the tag. <a href="#topMisc">Back</a>
       </p>

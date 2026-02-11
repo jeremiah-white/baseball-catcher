@@ -37,7 +37,7 @@ export default function ThrowingPage() {
         throwing out base runners.
       </p>
 
-      <h4>Grip</h4>
+      <h3>Grip</h3>
       <p>
         A proper grip is essential for accurate throws. Grip the ball across the
         seams as if you were a pitcher throwing a four-seam fastball. Ideally,
@@ -47,7 +47,7 @@ export default function ThrowingPage() {
         this manner. It will become second nature.
       </p>
 
-      <h4>Stealing</h4>
+      <h3>Stealing</h3>
       <p>
         A catcher&apos;s ability to throw out runners attempting to steal is a
         huge defensive asset. Not only do you keep runners out of scoring
@@ -62,7 +62,7 @@ export default function ThrowingPage() {
 
       <p>Click the images to find out more about throwing out base runners!</p>
 
-      <div style={{ display: "flex", gap: "1.5rem", margin: "1.5rem 0" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "1.5rem", margin: "1.5rem 0" }}>
         <Link href="/guide/throwing-secondbase">
           <Image
             src="/images/stealing2nd.gif"

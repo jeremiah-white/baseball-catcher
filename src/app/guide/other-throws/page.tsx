@@ -17,7 +17,7 @@ export default function OtherThrowsPage() {
         needs to master.
       </p>
 
-      <h4>Pickoff at First Base</h4>
+      <h3>Pickoff at First Base</h3>
       <p>
         The pickoff to first requires a quick step and throw. Receive the pitch,
         then step with your left foot toward first and make a quick, accurate
@@ -25,7 +25,7 @@ export default function OtherThrowsPage() {
         leaning the wrong way.
       </p>
 
-      <h4>Back-Pick at Third</h4>
+      <h3>Back-Pick at Third</h3>
       <p>
         This is an aggressive play to catch a runner leaning toward home. After
         receiving the pitch, quickly stand and fire to third. This works best when
@@ -33,7 +33,7 @@ export default function OtherThrowsPage() {
         between you and the third baseman is essential.
       </p>
 
-      <h4>Snap Throws</h4>
+      <h3>Snap Throws</h3>
       <p>
         A snap throw is a quick, dart-like throw without the normal throwing
         motion. It&apos;s used when a runner takes too big a lead and you want to catch
@@ -41,7 +41,7 @@ export default function OtherThrowsPage() {
         accuracy is crucial.
       </p>
 
-      <h4>Throwing to the Pitcher Covering Home</h4>
+      <h3>Throwing to the Pitcher Covering Home</h3>
       <p>
         On wild pitches or passed balls, you may need to flip the ball to your
         pitcher covering home plate. This should be a soft, underhand toss that&apos;s
@@ -49,7 +49,7 @@ export default function OtherThrowsPage() {
         than you might think.
       </p>
 
-      <h4>Throwing on Bunts</h4>
+      <h3>Throwing on Bunts</h3>
       <p>
         When fielding bunts, you need to field the ball cleanly and make a strong,
         accurate throw. Know where you&apos;re throwing before you field the ball.
@@ -57,7 +57,7 @@ export default function OtherThrowsPage() {
         you field it.
       </p>
 
-      <h4>Throwing After a Swinging Strike Three</h4>
+      <h3>Throwing After a Swinging Strike Three</h3>
       <p>
         When the ball gets away on strike three (with the batter-runner able to
         run), locate the ball quickly and make a strong throw to first. Don&apos;t rush

@@ -26,7 +26,7 @@ export default function ThrowingSecondbasePage() {
         accurate throw can shut down the opposing team&apos;s running game.
       </p>
 
-      <h4>Pop Time</h4>
+      <h3>Pop Time</h3>
       <p>
         Pop time is the measurement from when the ball hits your glove to when it
         hits the infielder&apos;s glove at second base. Elite catchers have pop times
@@ -34,27 +34,27 @@ export default function ThrowingSecondbasePage() {
         Work to improve your pop time, but never sacrifice accuracy for speed.
       </p>
 
-      <h4>The Setup</h4>
+      <h3>The Setup</h3>
       <p>
         With a runner on first, you should be in the ready stance. Your throwing
         hand should be in a fist behind your mitt, ready for a quick exchange.
       </p>
 
-      <h4>Receiving the Pitch</h4>
+      <h3>Receiving the Pitch</h3>
       <p>
         Catch the ball and immediately bring it to your throwing position. The
         transfer should be one fluid motion. Don&apos;t pull the ball into your body
         first—bring your hand to the ball.
       </p>
 
-      <h4>Footwork</h4>
+      <h3>Footwork</h3>
       <p>
         As you make the transfer, your feet should be replacing each other. Your
         right foot (for right-handers) comes forward to where your left foot was,
         and you step directly toward second base with your left foot as you throw.
       </p>
 
-      <h4>The Throw</h4>
+      <h3>The Throw</h3>
       <p>
         Throw over the top with a short arm action. Your target should be the
         shortstop&apos;s glove-side shoulder (or the second baseman if they&apos;re
@@ -62,7 +62,7 @@ export default function ThrowingSecondbasePage() {
         chance to apply the tag.
       </p>
 
-      <h4>Common Mistakes</h4>
+      <h3>Common Mistakes</h3>
       <ul>
         <li>Rising up too high—stay low through the throw</li>
         <li>Taking an extra step—unnecessary movement costs time</li>
