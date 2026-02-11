@@ -34,6 +34,9 @@ async function verifyTurnstileToken(token: string): Promise<boolean> {
   );
 
   const data: TurnstileVerifyResponse = await response.json();
+  if (!data.success) {
+    console.error("Turnstile verification failed:", data["error-codes"]);
+  }
   return data.success;
 }
 
