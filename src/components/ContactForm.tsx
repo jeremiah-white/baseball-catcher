@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
 interface ContactFormData {
   name: string;
@@ -13,6 +14,8 @@ interface ContactFormData {
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance>(null);
 
   const {
     register,
@@ -22,6 +25,12 @@ export default function ContactForm() {
   } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
+    if (!turnstileToken) {
+      setStatus("error");
+      setErrorMessage("Please complete the verification");
+      return;
+    }
+
     setStatus("loading");
     setErrorMessage("");
 
@@ -31,7 +40,7 @@ export default function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, turnstileToken }),
       });
 
       const result = await response.json();
@@ -42,9 +51,12 @@ export default function ContactForm() {
 
       setStatus("success");
       reset();
+      setTurnstileToken(null);
+      turnstileRef.current?.reset();
     } catch (error) {
       setStatus("error");
       setErrorMessage(error instanceof Error ? error.message : "An error occurred");
+      turnstileRef.current?.reset();
     }
   };
 
@@ -137,6 +149,16 @@ export default function ContactForm() {
           {errorMessage}
         </div>
       )}
+
+      <div className="contact-form__turnstile">
+        <Turnstile
+          ref={turnstileRef}
+          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+          onSuccess={setTurnstileToken}
+          onError={() => setTurnstileToken(null)}
+          onExpire={() => setTurnstileToken(null)}
+        />
+      </div>
 
       <button
         type="submit"
