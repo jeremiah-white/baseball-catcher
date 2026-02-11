@@ -27,15 +27,15 @@ async function verifyTurnstileToken(token: string): Promise<boolean> {
   console.log("Token:", token);
   console.log("Request body:", JSON.stringify({ secret: secretKey, response: token }));
 
+  const formData = new FormData();
+  formData.append("secret", secretKey);
+  formData.append("response", token);
+
   const response = await fetch(
     "https://challenges.cloudflare.com/turnstile/v0/siteverify",
     {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        secret: secretKey,
-        response: token,
-      }),
+      body: formData,
     },
   );
 
