@@ -21,8 +21,11 @@ async function verifyTurnstileToken(token: string): Promise<boolean> {
     return false;
   }
 
-  // Debug: log first 10 chars of secret key to verify it's correct
-  console.log("Secret key starts with:", secretKey.substring(0, 10) + "...");
+  // TEMPORARY DEBUG - remove after fixing
+  console.log("=== TURNSTILE DEBUG ===");
+  console.log("Secret key:", secretKey);
+  console.log("Token:", token);
+  console.log("Request body:", JSON.stringify({ secret: secretKey, response: token }));
 
   const response = await fetch(
     "https://challenges.cloudflare.com/turnstile/v0/siteverify",
@@ -37,6 +40,7 @@ async function verifyTurnstileToken(token: string): Promise<boolean> {
   );
 
   const data: TurnstileVerifyResponse = await response.json();
+  console.log("Turnstile response:", JSON.stringify(data));
   if (!data.success) {
     console.error("Turnstile verification failed:", data["error-codes"]);
   }
