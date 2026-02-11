@@ -78,6 +78,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
+      <p style={{color: 'red'}}>DEBUG: {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || 'ENV VAR IS EMPTY'}</p>
       <div className="contact-form__field">
         <label htmlFor="name" className="contact-form__label">
           Name <span className="contact-form__required">*</span>

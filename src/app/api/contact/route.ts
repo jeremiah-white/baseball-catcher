@@ -61,6 +61,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    console.log("Token received:", turnstileToken?.substring(0, 20) + "...", "Length:", turnstileToken?.length);
     const isValidToken = await verifyTurnstileToken(turnstileToken);
     if (!isValidToken) {
       return NextResponse.json(
