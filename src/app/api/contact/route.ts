@@ -15,11 +15,14 @@ interface TurnstileVerifyResponse {
 }
 
 async function verifyTurnstileToken(token: string): Promise<boolean> {
-  const secretKey = process.env.TURNSTILE_SECRET_KEY;
+  const secretKey = process.env.TURNSTILE_SECRET_KEY?.trim();
   if (!secretKey) {
     console.error("TURNSTILE_SECRET_KEY environment variable is not set");
     return false;
   }
+
+  // Debug: log first 10 chars of secret key to verify it's correct
+  console.log("Secret key starts with:", secretKey.substring(0, 10) + "...");
 
   const response = await fetch(
     "https://challenges.cloudflare.com/turnstile/v0/siteverify",
