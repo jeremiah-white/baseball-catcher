@@ -12,7 +12,9 @@ interface ContactFormData {
 }
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const turnstileRef = useRef<TurnstileInstance>(null);
@@ -55,7 +57,9 @@ export default function ContactForm() {
       turnstileRef.current?.reset();
     } catch (error) {
       setStatus("error");
-      setErrorMessage(error instanceof Error ? error.message : "An error occurred");
+      setErrorMessage(
+        error instanceof Error ? error.message : "An error occurred",
+      );
       turnstileRef.current?.reset();
     }
   };
@@ -78,7 +82,12 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
-      <p style={{color: 'red'}}>DEBUG: {JSON.stringify(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY) || 'ENV VAR IS EMPTY'} (length: {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.length})</p>
+      <p style={{ color: "red" }}>
+        DEBUG:{" "}
+        {JSON.stringify(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY) ||
+          "ENV VAR IS EMPTY"}{" "}
+        (length: {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.length})
+      </p>
       <div className="contact-form__field">
         <label htmlFor="name" className="contact-form__label">
           Name <span className="contact-form__required">*</span>
@@ -146,18 +155,14 @@ export default function ContactForm() {
       </div>
 
       {status === "error" && (
-        <div className="contact-form__error-message">
-          {errorMessage}
-        </div>
+        <div className="contact-form__error-message">{errorMessage}</div>
       )}
 
       <div className="contact-form__turnstile">
         <Turnstile
           ref={turnstileRef}
-          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim() || ''}
+          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim() || ""}
           onSuccess={setTurnstileToken}
-          onError={() => setTurnstileToken(null)}
-          onExpire={() => setTurnstileToken(null)}
         />
       </div>
 
