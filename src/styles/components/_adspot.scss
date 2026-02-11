@@ -1,0 +1,52 @@
+@use "../variables" as *;
+
+// Ad placeholder component
+// Use class "bc-adspot" to easily hide all ads site-wide
+.bc-adspot {
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.875rem;
+  font-family: $font-family-sans;
+  text-align: center;
+
+  &::before {
+    content: "Ad Space";
+  }
+
+  // Size variants
+  &--sidebar {
+    width: 120px;
+    height: 600px;
+  }
+
+  &--banner {
+    width: 100%;
+    max-width: 468px;
+    height: 60px;
+  }
+
+  &--leaderboard {
+    width: 100%;
+    max-width: 728px;
+    height: 90px;
+  }
+
+  &--square {
+    width: 250px;
+    height: 250px;
+  }
+
+  &--small {
+    width: 120px;
+    height: 240px;
+  }
+}
+
+// Utility class to hide all ad spots
+.hide-ads .bc-adspot {
+  display: none;
+}

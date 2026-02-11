@@ -1,0 +1,57 @@
+@use "variables" as *;
+
+// Responsive breakpoints
+@mixin mobile {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-sm) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// Common patterns
+@mixin container {
+  max-width: $max-width-content;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+@mixin section-header {
+  color: $baseball-navy;
+  padding-bottom: $spacing-sm;
+  margin: 0 0 $spacing-md 0;
+  font-size: 1.5rem;
+  font-family: $font-family-serif;
+  border-bottom: 3px solid $baseball-blue;
+}
+
+@mixin nav-link {
+  color: $baseball-white;
+  font-weight: bold;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin sidebar-bg {
+  background-color: $baseball-cream;
+}
+
+@mixin card {
+  background: $baseball-white;
+  border-radius: 0.5rem;
+  padding: $spacing-lg;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

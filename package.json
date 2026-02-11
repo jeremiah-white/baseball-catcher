@@ -1,9 +1,9 @@
 {
-  "name": "next-site",
+  "name": "baseball-catcher",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3006",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -11,7 +11,9 @@
   "dependencies": {
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-hook-form": "^7.71.1",
+    "resend": "^6.9.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -20,6 +22,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "sass": "^1.97.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,0 +1,51 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.main-nav {
+  background: $baseball-navy;
+  padding: 0.25rem 0;
+
+  &__list {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm $spacing-md;
+    list-style: none;
+    padding-top: $spacing-xs;
+    padding-bottom: $spacing-xs;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__link {
+    @include nav-link;
+  }
+
+  // Mobile hamburger
+  &__toggle {
+    display: none;
+
+    @include mobile {
+      display: block;
+      background: none;
+      border: none;
+      color: $baseball-white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: $spacing-sm;
+    }
+  }
+
+  @include mobile {
+    &__list {
+      display: none;
+      flex-direction: column;
+
+      &--open {
+        display: flex;
+      }
+    }
+  }
+}

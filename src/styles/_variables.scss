@@ -1,0 +1,35 @@
+// Baseball-themed color palette from original site
+$baseball-navy: #003366;
+$baseball-blue: #336699;
+$baseball-cream: #FFFFCC;
+$baseball-white: #FFFFFF;
+$baseball-black: #000000;
+
+// Semantic colors
+$color-primary: $baseball-navy;
+$color-secondary: $baseball-blue;
+$color-accent: $baseball-cream;
+$color-background: $baseball-white;
+$color-text: $baseball-black;
+$color-link: #0000CC;
+
+// Typography
+$font-family-serif: Georgia, "Times New Roman", Times, serif;
+$font-family-sans: Arial, Helvetica, sans-serif;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+// Layout
+$max-width-content: 1100px;
+$sidebar-width: 180px;
+$right-sidebar-width: 200px;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;

@@ -1,0 +1,208 @@
+// All @use rules must come first
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+@use "../styles/components/navigation";
+@use "../styles/components/adspot";
+@use "../styles/components/sidebar";
+@use "../styles/components/contact-form";
+
+// Tailwind CSS v4
+@import "tailwindcss";
+
+// Theme configuration for Tailwind v4
+@theme inline {
+  --color-background: #{$baseball-white};
+  --color-foreground: #{$baseball-black};
+  --color-primary: #{$baseball-navy};
+  --color-secondary: #{$baseball-blue};
+  --color-accent: #{$baseball-cream};
+  --font-sans: #{$font-family-sans};
+  --font-serif: #{$font-family-serif};
+}
+
+// Base styles
+:root {
+  --background: #{$baseball-white};
+  --foreground: #{$baseball-black};
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: $font-family-serif;
+  line-height: 1.6;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-serif;
+  line-height: 1.3;
+}
+
+a {
+  color: $color-link;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Site header
+.site-description {
+  background: $baseball-blue;
+  color: $baseball-white;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: $spacing-xs 0;
+  font-size: 0.875rem;
+
+  &__content {
+    @include container;
+  }
+}
+
+.site-name {
+  background: $baseball-navy;
+
+  &__content {
+    @include container;
+    padding-top: $spacing-md;
+    padding-bottom: $spacing-md;
+  }
+
+  a {
+    color: $baseball-white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: $font-family-serif;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Page header
+.page-header {
+  @include section-header;
+}
+
+// Footer
+.site-footer {
+  text-align: center;
+  background: $baseball-navy;
+  color: $baseball-white;
+  padding: $spacing-sm 0;
+  font-size: 0.875rem;
+  margin-top: auto;
+
+  a {
+    color: $baseball-white;
+  }
+}
+
+// Layout
+.page-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  @include container;
+  display: flex;
+  flex: 1;
+  gap: $spacing-md;
+  padding-top: $spacing-md;
+  padding-bottom: $spacing-md;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.left-sidebar {
+  width: $sidebar-width;
+  flex-shrink: 0;
+
+  @include mobile {
+    width: 100%;
+    order: 2;
+  }
+}
+
+.right-sidebar {
+  width: $right-sidebar-width;
+  flex-shrink: 0;
+
+  @include mobile {
+    width: 100%;
+    order: 3;
+  }
+}
+
+// Content sections
+.content-section {
+  margin-bottom: $spacing-lg;
+
+  dt {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: $spacing-xs;
+  }
+
+  dd {
+    margin: 0 0 $spacing-md 0;
+  }
+}
+
+// Glossary styles
+.glossary {
+  dt {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  dd {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Link list styles
+.link-list {
+  li {
+    margin-bottom: 0.75rem;
+  }
+}
+
+// Cards
+.feature-card {
+  @include card;
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+
+  &__image {
+    flex-shrink: 0;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: $spacing-xs;
+  }
+}

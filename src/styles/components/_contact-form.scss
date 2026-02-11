@@ -1,0 +1,91 @@
+@use "../variables" as *;
+
+.contact-form {
+  max-width: 600px;
+  margin: $spacing-lg 0;
+
+  &__field {
+    margin-bottom: $spacing-md;
+  }
+
+  &__label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: $spacing-xs;
+    font-family: $font-family-sans;
+  }
+
+  &__required {
+    color: #c00;
+  }
+
+  &__input {
+    width: 100%;
+    padding: $spacing-sm;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: $font-family-sans;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border-color: $baseball-blue;
+      box-shadow: 0 0 0 2px rgba($baseball-blue, 0.2);
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  &__error {
+    display: block;
+    color: #c00;
+    font-size: 0.875rem;
+    margin-top: $spacing-xs;
+  }
+
+  &__error-message {
+    background-color: #fee;
+    border: 1px solid #c00;
+    color: #c00;
+    padding: $spacing-sm;
+    border-radius: 4px;
+    margin-bottom: $spacing-md;
+  }
+
+  &__button {
+    background-color: $baseball-navy;
+    color: $baseball-white;
+    border: none;
+    padding: $spacing-sm $spacing-lg;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover:not(:disabled) {
+      background-color: $baseball-blue;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &__success {
+    background-color: #efe;
+    border: 1px solid #0a0;
+    padding: $spacing-lg;
+    border-radius: 4px;
+    text-align: center;
+
+    h3 {
+      color: #080;
+      margin-bottom: $spacing-sm;
+    }
+  }
+}

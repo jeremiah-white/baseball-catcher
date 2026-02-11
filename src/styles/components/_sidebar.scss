@@ -1,0 +1,46 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.sidebar {
+  @include sidebar-bg;
+  padding: $spacing-md $spacing-sm;
+  font-size: 0.875rem;
+  font-family: $font-family-sans;
+
+  &__section-title {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: $spacing-sm;
+    color: $baseball-black;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 0 $spacing-md 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: $spacing-xs;
+  }
+
+  &__link {
+    color: $color-link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &--active {
+      font-weight: bold;
+    }
+  }
+
+  &__divider {
+    height: 2px;
+    background: $baseball-black;
+    width: 75px;
+    margin: $spacing-md 0;
+  }
+}
