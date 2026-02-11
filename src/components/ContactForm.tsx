@@ -78,7 +78,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
-      <p style={{color: 'red'}}>DEBUG: {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || 'ENV VAR IS EMPTY'}</p>
+      <p style={{color: 'red'}}>DEBUG: {JSON.stringify(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY) || 'ENV VAR IS EMPTY'} (length: {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.length})</p>
       <div className="contact-form__field">
         <label htmlFor="name" className="contact-form__label">
           Name <span className="contact-form__required">*</span>
@@ -154,7 +154,7 @@ export default function ContactForm() {
       <div className="contact-form__turnstile">
         <Turnstile
           ref={turnstileRef}
-          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim() || ''}
           onSuccess={setTurnstileToken}
           onError={() => setTurnstileToken(null)}
           onExpire={() => setTurnstileToken(null)}
