@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
-import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 interface ContactFormData {
   name: string;
@@ -16,8 +16,7 @@ export default function ContactForm() {
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
-  const turnstileRef = useRef<TurnstileInstance>(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const {
     register,
@@ -26,43 +25,45 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm<ContactFormData>();
 
-  const onSubmit = async (data: ContactFormData) => {
-    if (!turnstileToken) {
-      setStatus("error");
-      setErrorMessage("Please complete the verification");
-      return;
-    }
-
-    setStatus("loading");
-    setErrorMessage("");
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ...data, turnstileToken }),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || "Failed to send message");
+  const onSubmit = useCallback(
+    async (data: ContactFormData) => {
+      if (!executeRecaptcha) {
+        setStatus("error");
+        setErrorMessage("reCAPTCHA not loaded");
+        return;
       }
 
-      setStatus("success");
-      reset();
-      setTurnstileToken(null);
-      turnstileRef.current?.reset();
-    } catch (error) {
-      setStatus("error");
-      setErrorMessage(
-        error instanceof Error ? error.message : "An error occurred",
-      );
-      turnstileRef.current?.reset();
-    }
-  };
+      setStatus("loading");
+      setErrorMessage("");
+
+      try {
+        const recaptchaToken = await executeRecaptcha("contact_form");
+
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ...data, recaptchaToken }),
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.error || "Failed to send message");
+        }
+
+        setStatus("success");
+        reset();
+      } catch (error) {
+        setStatus("error");
+        setErrorMessage(
+          error instanceof Error ? error.message : "An error occurred",
+        );
+      }
+    },
+    [executeRecaptcha, reset],
+  );
 
   if (status === "success") {
     return (
@@ -82,12 +83,6 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
-      <p style={{ color: "red" }}>
-        DEBUG:{" "}
-        {JSON.stringify(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY) ||
-          "ENV VAR IS EMPTY"}{" "}
-        (length: {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.length})
-      </p>
       <div className="contact-form__field">
         <label htmlFor="name" className="contact-form__label">
           Name <span className="contact-form__required">*</span>
@@ -157,14 +152,6 @@ export default function ContactForm() {
       {status === "error" && (
         <div className="contact-form__error-message">{errorMessage}</div>
       )}
-
-      <div className="contact-form__turnstile">
-        <Turnstile
-          ref={turnstileRef}
-          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim() || ""}
-          onSuccess={setTurnstileToken}
-        />
-      </div>
 
       <button
         type="submit"

@@ -6,51 +6,58 @@ interface ContactFormData {
   email: string;
   subject: string;
   message: string;
-  turnstileToken: string;
+  recaptchaToken: string;
 }
 
-interface TurnstileVerifyResponse {
+interface ReCaptchaVerifyResponse {
   success: boolean;
+  score?: number;
+  action?: string;
+  challenge_ts?: string;
+  hostname?: string;
   "error-codes"?: string[];
 }
 
-async function verifyTurnstileToken(token: string): Promise<boolean> {
-  const secretKey = process.env.TURNSTILE_SECRET_KEY?.trim();
+async function verifyReCaptchaToken(token: string): Promise<boolean> {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
   if (!secretKey) {
-    console.error("TURNSTILE_SECRET_KEY environment variable is not set");
+    console.error("RECAPTCHA_SECRET_KEY environment variable is not set");
     return false;
   }
 
-  // TEMPORARY DEBUG - remove after fixing
-  console.log("=== TURNSTILE DEBUG ===");
-  console.log("Secret key:", secretKey);
-  console.log("Token:", token);
-  console.log("Request body:", JSON.stringify({ secret: secretKey, response: token }));
-
-  const formData = new FormData();
-  formData.append("secret", secretKey);
-  formData.append("response", token);
-
   const response = await fetch(
-    "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+    "https://www.google.com/recaptcha/api/siteverify",
     {
       method: "POST",
-      body: formData,
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret: secretKey,
+        response: token,
+      }),
     },
   );
 
-  const data: TurnstileVerifyResponse = await response.json();
-  console.log("Turnstile response:", JSON.stringify(data));
+  const data: ReCaptchaVerifyResponse = await response.json();
+
   if (!data.success) {
-    console.error("Turnstile verification failed:", data["error-codes"]);
+    console.error("reCAPTCHA verification failed:", data["error-codes"]);
+    return false;
   }
-  return data.success;
+
+  // For reCAPTCHA v3, check the score (0.0 - 1.0, higher is more likely human)
+  // 0.5 is a reasonable threshold
+  if (data.score !== undefined && data.score < 0.5) {
+    console.error("reCAPTCHA score too low:", data.score);
+    return false;
+  }
+
+  return true;
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body: ContactFormData = await request.json();
-    const { name, email, subject, message, turnstileToken } = body;
+    const { name, email, subject, message, recaptchaToken } = body;
 
     // Validate required fields
     if (!name || !email || !subject || !message) {
@@ -60,16 +67,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify Turnstile token
-    if (!turnstileToken) {
+    // Verify reCAPTCHA token
+    if (!recaptchaToken) {
       return NextResponse.json(
         { error: "Verification required" },
         { status: 400 },
       );
     }
 
-    console.log("Token received:", turnstileToken?.substring(0, 20) + "...", "Length:", turnstileToken?.length);
-    const isValidToken = await verifyTurnstileToken(turnstileToken);
+    const isValidToken = await verifyReCaptchaToken(recaptchaToken);
     if (!isValidToken) {
       return NextResponse.json(
         { error: "Verification failed. Please try again." },
@@ -109,7 +115,6 @@ export async function POST(request: NextRequest) {
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      // from: "Baseball-Catcher.com <noreply@baseball-catcher.com>",
       from: "onboarding@resend.dev",
       to: [toEmail],
       replyTo: email,

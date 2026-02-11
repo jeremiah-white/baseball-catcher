@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import ReCaptchaWrapper from "@/components/ReCaptchaWrapper";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -16,7 +17,9 @@ export default function ContactPage() {
           Have a question, suggestion, or feedback? We&apos;d love to hear from you!
           Fill out the form below and we&apos;ll get back to you as soon as possible.
         </p>
-        <ContactForm />
+        <ReCaptchaWrapper>
+          <ContactForm />
+        </ReCaptchaWrapper>
       </div>
     </div>
   );
