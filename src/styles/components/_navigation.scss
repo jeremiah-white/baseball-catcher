@@ -23,21 +23,6 @@
     @include nav-link;
   }
 
-  // Mobile hamburger
-  &__toggle {
-    display: none;
-
-    @include mobile {
-      display: block;
-      background: none;
-      border: none;
-      color: $baseball-white;
-      font-size: 1.5rem;
-      cursor: pointer;
-      padding: $spacing-sm;
-    }
-  }
-
   @include mobile {
     &__list {
       display: none;

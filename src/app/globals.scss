@@ -69,6 +69,9 @@ a {
     @include container;
     padding-top: $spacing-md;
     padding-bottom: $spacing-md;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   a {
@@ -80,6 +83,20 @@ a {
 
     &:hover {
       text-decoration: none;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: $baseball-white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: $spacing-xs $spacing-sm;
+
+    @include mobile {
+      display: block;
     }
   }
 }

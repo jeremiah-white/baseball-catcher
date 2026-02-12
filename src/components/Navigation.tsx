@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 
 const navItems = [
   { href: "/", label: "Home", title: "baseball-catcher" },
@@ -14,19 +13,16 @@ const navItems = [
   { href: "/contact", label: "Contact", title: "contact" },
 ];
 
-export default function Navigation() {
+interface NavigationProps {
+  isOpen: boolean;
+  setIsOpen: (open: boolean) => void;
+}
+
+export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="main-nav">
-      <button
-        className="main-nav__toggle"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Toggle navigation"
-      >
-        ☰
-      </button>
       <ul className={`main-nav__list ${isOpen ? "main-nav__list--open" : ""}`}>
         {navItems.map((item) => (
           <li key={item.href} className="main-nav__item">
